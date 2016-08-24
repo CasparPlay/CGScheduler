@@ -1,0 +1,99 @@
+4.3.0
+	"Days" mode for Timeline view was added
+	Ability to present units for multiple days in the Units view
+	Add ability to link events using URL extension
+	Several new API events and settings
+	Fixes for DST issues
+	Fixed bug with creating new events on touch devices in Timeline
+
+	Week Agenda, Grid View, Timeline view, Units View, Multisection events are available in Commercial and Enterprise editions only
+
+
+4.2.0
+	Ability to customize the layout of recurring form
+	Updated dhtmlxDataProcessor - REST mode and support of JSON response format
+	Updated D'n'D of the multisection events
+	Add API events for handling Ajax and server errors
+	Improved performance of the Timeline view
+	Add config option for delayed rendering mode
+	Improved data export to iCal and Excel
+	Fixed compatibility with DHTMLX Suite 4.0
+	Multiple minor fixes
+
+4.1.0
+	New 'Flat' skin
+	Highlight event position on the time scale during D'n'D
+	Support for multisection events in Units and Timeline views
+	Ability to resize events in Month view
+	Ability to D'n'D between schedulers, and drag event outside the scheduler (PRO version only)
+	New PDF/PNG online export service
+	Updated configuration of a Grid view
+	Updated touch support, fixed multiple issues with Windows touch devices
+
+4.0.1
+	Minor regression, which was introduced in 4.0, are fixed
+
+4.0
+	Flexible time scales - some days, hours can be removed from time scale
+	Ability to show "more events" links in month view
+	jQuery integration
+	Backbone Integration
+	Default skin changed to "terrace", multi-day events are visible by default
+	Alternative start-date logic for recurring events
+	Documentation greatly improved
+
+3.7
+	Touch support ( tablets and touch monitors )
+	Romanian locale added
+
+3.6
+	Windows8 edition added
+	Extended date format configuration for lightbox form
+	Sub-day navigation in timeline view
+	Ability to define custom sorting in timeline view
+	Multi-page export to PDF
+
+3.5
+	Ability to show multiple scheduler's per page (PRO version only)
+	Supports loading JSON directly from Connectors
+	Custom events rendering
+	Timeline view improved (support for drag, resize, event height control)
+	New 'dhx_terrace' skin
+	New options for blocking dates
+	Marking time intervals
+	Highlighting time intervals
+	New API methods: updateView, showEvent, getRenderedEvent, getActionData
+	JSMessage included
+	Grid view
+	New configuration options
+	Simplified access to lightbox section objects
+
+
+
+3.0
+	Version of scheduler for touch phones 
+	WeekAgenda view 
+	Netbook friendly lightbox form 
+	Cascade event display 
+	Simple way to define a color for event
+	Drag and drop of the details form
+	Custom buttons for the details form 
+	Current time marker in day and week view
+	Multiline header for timeline view
+	Configurable work-time bounds 
+	API to access lightbox values 
+	
+
+
+2.3 
+	Map view was added 
+	Cell mode for Timeline view was added 
+	Tree mode for Timeline view was added 
+	Tooltips for all views were added
+	Abbility to create new events by double click or by drag-and-drop in Timeline mode
+	Abbility to move events by drop-and-drag in Timeline mode
+	Abbility to create new events by external drag and drop 
+	Multiselect section for details form 
+	Checkbox, combo, radio - sections for details form 
+	Api of mini-calendar extension extended 
+	Custom form implementation simplified

@@ -1,0 +1,20 @@
+.tier1{
+	background: red;
+	color:white;
+}
+.tier2{
+	background: orange;
+	color:white;
+}
+.tier3{
+	background: green;
+	color:white;
+}
+.dhx_scheduler_month .dhx_marked_timespan { display:block; }
+.holiday {
+	background-color: #fadcd3;
+	text-align: center;
+	font-size: 24px;
+	opacity: 0.8;
+	color: #e2b8ac;
+}

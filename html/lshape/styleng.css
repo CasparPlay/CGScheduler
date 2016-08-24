@@ -1,0 +1,98 @@
+body {
+    background-image: url("background.jpg");
+}
+
+.outer_div{
+	position : relative;
+	height : 650px;
+	width : 80%;
+	left : 20px;
+	top : 80px;
+	background : white;
+	border : 1px solid blue;
+}
+
+.inner_div1{
+	position : absolute;
+	top: 20px;
+    left: 20px;
+    width: 0px;
+    height: 50px;
+}
+
+.inner_div2{
+	position : absolute;
+	top: 60px;
+    left: 20px;
+    width: 0px;
+    height: 50px;
+}
+
+.inner_div3{
+	position : absolute;
+	top: 120px;
+    left: 20px;
+    width: 0px;
+    height: 50px;
+}
+
+.inner_div4{
+	position : absolute;
+	top: 60px;
+    right: 420px;
+    width: 0px;
+    height: 50px;
+}
+.inner_div5{
+	position : absolute;
+	top: 120px;
+    right: 420px;
+    width: 0px;
+    height: 50px;
+}
+
+.inner_div6{
+	position : absolute;
+	top: 340px;
+    left: 20px;
+    width: 0px;
+    height: 50px;
+}
+
+.inner_div7{
+	position : absolute;
+	top: 400px;
+    left: 20px;
+    width: 0px;
+    height: 50px;
+}
+
+.inner_div8{
+	position : absolute;
+	top: 340px;
+    right: 420px;
+    width: 0px;
+    height: 50px;
+}
+.inner_div9{
+	position : absolute;
+	top: 400px;
+    right: 420px;
+    width: 0px;
+    height: 50px;
+}
+
+.inner_div10{
+	position : absolute;
+	top: 580px;
+    right: 420px;
+    width: 0px;
+    height: 50px;
+}
+.inner_div11{
+	position : absolute;
+	top: 620px;
+    right: 140px;
+    width: 0px;
+    height: 50px;
+}

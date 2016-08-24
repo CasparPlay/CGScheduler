@@ -1,0 +1,168 @@
+h1{
+right:40px;
+font-family:monotype corsiva;
+font-size: 70px;
+color:white;
+position:absolute;
+}
+.sidebar { 
+	font-family:Cambria;
+	padding-left: 45%;
+	border-bottom-left-radius: 0px;
+	border-bottom-right-radius: 0px;
+	top:50px;
+        min-height:40px;
+}
+.sidebar ul{
+	color:#000;
+	margin: 0; 
+	padding:0; 
+	list-style: none
+}
+.sidebar ul li{
+	float: left;
+}
+.sidebar ul li:first-child{
+	border-left: none
+}
+.sidebar ul li:last-child{
+	border-right: none
+}
+.sidebar ul li a{
+	display: block; 
+	color: black;
+	padding: 10px 15px; 
+	text-align:center;
+        
+}
+.sidebar ul li a:hover{
+	color:green; 
+	background:white ;
+}
+
+#i1{
+position:absolute;
+height: 328px;
+width:1190px;
+}
+
+#menu{
+height:750px;
+width:140px;
+
+float:left;
+top:300px;
+}
+#content{
+font-size:23px;
+float:right;
+position:absolute;
+border:0px solid red;
+}
+
+#content1{
+font-size:23px;
+top:px;
+left:140px;
+position:absolute;
+}
+
+#subtitle
+{
+
+font-size:20px;
+text-align:right;
+top:200px;
+right:35px;
+position:absolute;
+}
+
+h3
+{
+font-family:Aharoni;
+text-align:centre;
+font-size:50px;
+}
+
+#cox
+{
+color:white;
+text-align:justify;
+}
+
+#image
+{
+top:200px;
+left:150px;
+right:60px;
+}
+
+#sundar
+{
+font-family:monotype corsiva;
+font-size:80px;
+text-align:right;
+right:25px;
+}
+
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,300,600);	
+
+
+#slider {
+  position: relative;
+  overflow: hidden;
+  margin: 10px auto 0 auto;
+  margin-top:0px;
+  border-radius: 4px;
+}
+
+#slider ul {
+  position: relative;
+  margin: 0;
+  padding: 0;
+  height: 200px;
+  list-style: none;
+}
+
+#slider ul li {
+  position: relative;
+  display: block;
+  float: left;
+  padding: 0;
+  width: 1320px;
+  height: 300px;
+  background: #ccc;
+  text-align: center;
+  line-height: 300px;
+}
+
+a.control_prev, a.control_next {
+  position: absolute;
+  top: 40%;
+  z-index: 999;
+  display: block;
+  padding: 2% 2%;
+  width: auto;
+  height: auto;
+  background: #2a2a2a;
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 18px;
+  opacity: 0.8;
+  cursor: pointer;
+}
+
+a.control_prev:hover, a.control_next:hover {
+  opacity: 1;
+  -webkit-transition: all 0.2s ease;
+}
+
+a.control_prev {
+  border-radius: 0 2px 2px 0;
+}
+
+a.control_next {
+  right: 0;
+  border-radius: 2px 0 0 2px;
+}

@@ -1,0 +1,185 @@
+
+
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Create Schedule</title>
+ <!--  <link rel="stylesheet" src="jquery-ui.css"> -->
+  <script src="jquery-1.10.2.js"></script>
+<!--   <script src="jquery-ui.js"></script>
+  <link rel="stylesheet" src="style.css">  -->
+
+<link href="jquery.datepick.css" rel="stylesheet">
+<!-- <script src="jquery.min.js"></script> -->
+<script src="jquery.plugin.js"></script>
+<script src="jquery.datepick.js"></script>
+ 
+<script type="text/javascript" language="javascript" >
+  
+
+  $(document).ready(function(){
+      $(function() {
+        $( "#startDate" ).datepick();
+      });
+      $(function() {
+        $( "#endDate" ).datepick();
+      });
+
+        // RESET BUTTON
+        $("#resetButton").click(function(event){
+          document.getElementById("startDate").value = "";
+          document.getElementById("endDate").value = "";
+        });
+        
+        // CREATE BUTTON
+        $("#createButton").click(function(event){
+            if($('#startDate').val()==""){
+              alert("Enter starting date!");
+             // return false;
+            } 
+            if($('#endDate').val()==""){
+              alert("Enter ending date!");
+             // return false;
+            }
+            var d1 = $("#startDate").val();
+            var d2 = $("#endDate").val();
+
+            var dd1 = new Date(d1);
+            var dd2 = new Date(d2);
+            
+            var days = ( (dd2 - dd1)/(1000*60*60*24) );
+            alert ( days );
+
+            dd1.setMonth ( dd1.getMonth() + 1);
+			      var month ;
+            var day ;
+            var hour ;
+            var minute ;
+            var second ;
+            var dateFrom ;
+			      var dateTo ;
+            var type ;
+						  
+            for (var i = 0; i <= days; i++) {
+              for (var j = 1; j <= 48; j++) {
+                for (var k = 1; k <= 6; k++) {
+
+                      if (k==1 || k==3 || k==5) 
+                        {
+                           //    ===dateFrom===
+                           month = dd1.getMonth();
+                           day = dd1.getDate();
+                           hour = dd1.getHours();
+                           minute = dd1.getMinutes();
+                           second = dd1.getSeconds();
+
+                           dateFrom = dd1.getFullYear() + '-' +
+                                      ((''+month).length<2 ? '0' : '') + month + '-' +
+                                      ((''+day).length<2 ? '0' : '') + day + ' ' +
+                                      ((''+hour).length<2 ? '0' :'') + hour + ':' +
+                                      ((''+minute).length<2 ? '0' :'') + minute + ':' +
+                                      ((''+second).length<2 ? '0' :'') + second;
+                          
+                           //    ===dateTo===
+                           dd1.setMinutes ( dd1.getMinutes() + 3 );
+                           month = dd1.getMonth();
+                           day = dd1.getDate();
+                           hour = dd1.getHours();
+                           minute = dd1.getMinutes();
+                           second = dd1.getSeconds();
+
+                           dateTo = dd1.getFullYear() + '-' +
+                                      ((''+month).length<2 ? '0' : '') + month + '-' +
+                                      ((''+day).length<2 ? '0' : '') + day + ' ' +
+                                      ((''+hour).length<2 ? '0' :'') + hour + ':' +
+                                      ((''+minute).length<2 ? '0' :'') + minute + ':' +
+                                      ((''+second).length<2 ? '0' :'') + second;
+                           type = 1;
+                            //$("#para1").append("</br>", type,"-----",dateFrom, "  --To--  ", dateTo);
+						  
+              							$.post("test.php", {dateFrom:dateFrom,dateTo: dateTo, type:type},  function(data, textStatus)
+              							{
+              								if(data == 1){
+              									$('#response').html("Registration successfull!!");
+              									$('#response').css('color','green');
+              								}
+              								else{
+              									$('#response').html("Some Error Occurred");
+              									$('#response').css('color','red');
+              								}
+              							});
+							
+                        }
+                        else
+                        {
+          							  //    ===dateFrom===
+          							  month = dd1.getMonth();
+          							  day = dd1.getDate();
+          							  hour = dd1.getHours();
+          							  minute = dd1.getMinutes();
+          							  second = dd1.getSeconds();
+
+          							  dateFrom = dd1.getFullYear() + '-' +
+          										  ((''+month).length<2 ? '0' : '') + month + '-' +
+          										  ((''+day).length<2 ? '0' : '') + day + ' ' +
+          										  ((''+hour).length<2 ? '0' :'') + hour + ':' +
+          										  ((''+minute).length<2 ? '0' :'') + minute + ':' +
+          										  ((''+second).length<2 ? '0' :'') + second;
+
+          							  //    ===dateTo===
+          							  dd1.setMinutes ( dd1.getMinutes() + 7 );
+          							  month = dd1.getMonth();
+          							  day = dd1.getDate();
+          							  hour = dd1.getHours();
+          							  minute = dd1.getMinutes();
+          							  second = dd1.getSeconds();
+
+          							  dateTo = dd1.getFullYear() + '-' +
+          										  ((''+month).length<2 ? '0' : '') + month + '-' +
+          										  ((''+day).length<2 ? '0' : '') + day + ' ' +
+          										  ((''+hour).length<2 ? '0' :'') + hour + ':' +
+          										  ((''+minute).length<2 ? '0' :'') + minute + ':' +
+          										  ((''+second).length<2 ? '0' :'') + second;
+          							  type = 0;
+                          //$("#para1").append("</br>", type,"-----",dateFrom, "  --To--  ", dateTo);
+                        
+                          $.post("test.php", {dateFrom:dateFrom,dateTo: dateTo, type:type},  function(data, textStatus)
+          								{
+          									if(data == 1){
+          										$('#response').html("Registration successfull!!");
+          										$('#response').css('color','green');
+          									}
+          									else{
+          										$('#response').html("Some Error Occurred");
+          										$('#response').css('color','red');
+          									}
+          								});
+                        }	//end of else
+						
+                } //end of 3rd For loop
+              } //end of 2nd For loop 
+            } //end of 1st For loop
+          }); //end of click()
+    }); //end of ready()
+     //location.reload(); 
+  </script>
+</head>
+
+<body>
+ 
+<p id="para1">Counting loop</p> <br/>
+
+<!--<form action="test.php" method="post"> -->
+
+	<p>Date From: <input type="text" id="startDate"name="dateFrom"></p>
+	<p>Date To  : <input type="text" id="endDate" name="dateTo"></p>
+	<input type="button" id="createButton" value="Create" />
+	<label id="response"> Looking for Status...</label>
+	<input type="button" id="resetButton" value="Reset" />
+	
+  
+</body>
+</html>
+
+
