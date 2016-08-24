@@ -8,10 +8,11 @@
 
 3.  Then create the file /etc/apache2/sites-available/scheduler with the following content. You must change the IP, domain through which they belong.
 
-       <VirtualHost 192.168.10.10:82>
-       DocumentRoot /var/www/CGScheduler/html
-         ServerName CGScheduler
-         ServerAdmin localhost
+   
+        <VirtualHost 192.168.10.10:82>
+        DocumentRoot /var/www/CGScheduler/html
+        ServerName CGScheduler
+		    ServerAdmin localhost
         <Directory /var/www/CGScheduler/html/ >
                 DirectoryIndex index.php
                 AllowOverride all
@@ -50,4 +51,3 @@ sudo chown -R www-data.www-data /var/www/CGScheduler/
 	
 	
 	
-
