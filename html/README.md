@@ -9,21 +9,21 @@
    first create the directory-  mkdir -p /var/www/scheduler
 
 3.  Then create the file /etc/apache2/sites-available/scheduler with the following content. Change the IP, domain through which they belong.
-
+    
     <VirtualHost 192.168.10.10:82>
         
         DocumentRoot /var/www/CGScheduler/html
         ServerName scheduler
-		    ServerAdmin localhost
+        ServerAdmin localhost
       <Directory /var/www/CGScheduler/html/ >
           DirectoryIndex index.php
           AllowOverride all
           Order allow,deny
           allow from all
       </Directory>
-	</VirtualHost>
+	</VirtualHost> 
 	
-	here , 192.168.10.10 is pc/server ip address and 82 is listening port. To configure listening port ,
+     here , 192.168.10.10 is pc/server ip address and 82 is listening port. To configure listening port ,
    
     open /etc/apache2/port.conf file and add :
 
