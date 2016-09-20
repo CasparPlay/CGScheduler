@@ -1,3 +1,7 @@
+<p align="center"><img src="/html/imgs/scheduleDisplay.png"></p>
+<p align="center"><img src="/html/imgs/ScheduleEntryWindow.png"></p>
+<p align="center"><img src="/html/imgs/schedulelist.png"></p>
+<p align="center"><img src="/html/imgs/createuser.png"></p>
 1. First we need to install the necessary packages 
 
 	apt-get install apache2 libapache2-mod-php5 php5 php5-curl php5-intl php5-mcrypt php5-mysql php5-sqlite php5-xmlrpc php5-gd mysql-server mysql-client
