@@ -7,8 +7,8 @@ $loop = $_GET["loop"];
 $state = $_GET["on"];
 
 
-$host_primary = "10.3.10.190";
-$host_secondary = "10.3.10.191";
+$host_primary = "172.16.10.89";
+$host_secondary = "172.16.10.90";
 
 $port = 5250;
 
