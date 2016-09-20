@@ -10,7 +10,7 @@
     //======================================================================
  	//Establishing Connection with locaslhost Server by passing server_name, user_id and password as a parameter 
 
-	$connection = mysql_connect("10.3.10.197", "root", "password") or die('Could not connect to localhost. ' . mysql_error());
+	$connection = mysql_connect("172.16.10.88", "root", "password") or die('Could not connect to localhost. ' . mysql_error());
 	$db = mysql_select_db("project", $connection) or die('Could not select database of localhost');
 
 	$Error = false;
@@ -64,12 +64,12 @@
 	if(!$Error)
 	{ 
 		//Establishing Connection with CasperCG Server by passing server_name, user_id and password as a parameter 
-		$connection1 = mysql_connect("10.3.10.190","root","password") or die('Could not connect to Primary Server. '.mysql_error());					
-		$db1 = mysql_select_db("casparcg", $connection1) or die('Could not select database of Primary Server.');
+		$connection1 = mysql_connect("172.16.10.89","root","password") or die('Could not connect to Primary Server. '.mysql_error());					
+		$db1 = mysql_select_db("cgprimary", $connection1) or die('Could not select database of Primary Server.');
 
 		//Establishing Connection with CasperCG secondary Server by passing server_name, user_id and password as a parameter
-		$connection2 = mysql_connect("10.3.10.191", "root", "password") or die('Could not connect to Secondary Server. ' . mysql_error());;						
-		$db2 = mysql_select_db("casparcg", $connection2) or die('Could not select database of Secondary Server.');	
+		$connection2 = mysql_connect("172.16.10.90", "root", "password") or die('Could not connect to Secondary Server. ' . mysql_error());;						
+		$db2 = mysql_select_db("cgsecondary", $connection2) or die('Could not select database of Secondary Server.');	
 
 		mysql_query("START TRANSACTION");
 		$flag = true;
