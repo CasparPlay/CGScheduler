@@ -1,7 +1,7 @@
 <?php
 	$host_database = "127.0.0.1";
-	$host_primary = "10.3.10.190";
-	$host_secondary = "10.3.10.191";
+	$host_primary = "172.16.10.89";
+	$host_secondary = "172.16.10.90";
 
 	$username = "root";
 	$password = "password";
