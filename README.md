@@ -49,7 +49,7 @@
 
 6. Now provide this command :
 
-sudo chown -R www-data.www-data /var/www/CGScheduler/
+   sudo chown -R www-data.www-data /var/www/CGScheduler/
 
 7. Create a mysql database named "project" and import project.sql into project database.
 
