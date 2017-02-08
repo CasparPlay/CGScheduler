@@ -51,7 +51,7 @@
 
    sudo chown -R www-data.www-data /var/www/CGScheduler/
 
-7. Create a mysql database named "project" and import project.sql into project database. 
+7. Download project.sql from above. Now create a mysql database named "project" and import project.sql into project database. 
    Login user name: sysnova and password: password.
 
 
